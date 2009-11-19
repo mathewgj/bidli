@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Items: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+  <script type="text/javascript" src="http://use.typekit.com/jqj2mbs.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script type="text/javascript" charset="utf-8" src="http://bit.ly/javascript-api.js?version=latest&login=tweettrackjs&apiKey=R_7e9987b2fd13d7e4e881f9cbb168f523"></script>
+
+
+  <script type="text/javascript" charset="utf-8" src="http://s.bit.ly/TweetAndTrack.js?v=1.01"></script>
+
+
+</head>
+<body>
+
+<p style="color: green"><%= flash[:notice] %></p>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<p>
+  <b>Title:</b>
+  <%=h @item.title %>
+</p>
+
+<p>
+  <b>Starting bid:</b>
+  <%=h @item.startingbid %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%=h @item.enddate %>
+</p>
+
+<p>
+  <b>Photo:</b>
+  <%= image_tag @item.photo.url %>
+</p>
+
+
+<p>
+<b>Place Bid:</b>
+ <a href="#" onclick="return TweetAndTrack.open(this, 'http://localhost:3000<%= url_for(@item) %>');"><span style="display:none;">I bid $(bid amt) xyz<%=h @item.id %></span>Place Bid</a>
+</p>
+<p>
+<b>Start Auction:</b>
+ <a href="#" onclick="return TweetAndTrack.open(this, 'http://localhost:3000<%= url_for(@item) %>');"><span style="display:none;">I started this new auction. xyz<%=h @item.id %></span>Start Auction</a>
+</p>
+
+<p>
+	<b>Current Bids:</b>
+	<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: 'xyz<%=h @item.id %>',
+  interval: 6000,
+  title: 'Who is winning this auction',
+  subject: 'Bids',
+  width: 250,
+  height: 300,
+  theme: {
+    shell: {
+      background: '#ffffff',
+      color: '#444444'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#1985b5'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    behavior: 'default'
+  }
+}).render().start();
+</script>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
