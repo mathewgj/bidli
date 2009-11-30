@@ -9,7 +9,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091117035511) do
+ActiveRecord::Schema.define(:version => 20091127224615) do
+
+  create_table "auctions", :force => true do |t|
+    t.string   "title"
+    t.string   "startbid"
+    t.string   "endtime"
+    t.string   "description"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
 
   create_table "items", :force => true do |t|
     t.string   "title"
@@ -21,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20091117035511) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.string   "seller"
   end
 
   create_table "users", :force => true do |t|

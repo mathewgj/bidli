@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
 
 # this requires us to log in through Twitter before accessing any actions here  
-before_filter :login_required
+before_filter :login_required, :except => [:index, :show]
 
   # GET /items
   # GET /items.xml

@@ -13,8 +13,14 @@
     <td><%=h item.startingbid %></td>
     <td><%=h item.enddate %></td>
     <td><%= link_to 'Show', item %></td>
+    
+	<% if current_user.login == 'matjohnson' %>
+    
     <td><%= link_to 'Edit', edit_item_path(item) %></td>
     <td><%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
+	<% else %>
+	<% end %>   
+   
   </tr>
 <% end %>
 </table>

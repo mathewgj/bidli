@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :items
+  map.resources :users, :has_many => :auctions 
 
   map.static '/:action', :controller => 'static'
 

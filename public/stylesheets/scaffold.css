@@ -9,6 +9,13 @@ body, p, ol, ul, td {
   line-height: 18px;
 }
 
+
+h1 a {
+    color: #057;
+    text-decoration: none; }
+
+
+
 pre {
   background-color: #eee;
   padding: 10px;

@@ -1,3 +1,13 @@
+<table>
+	<tbody>
+		<tr>
+			<td>
+				<p>
+
+  <%= image_tag @item.photo.url %>
+</p>
+			</td>
+			<td>
 <p>
   <b>Title:</b>
   <%=h @item.title %>
@@ -14,19 +24,31 @@
 </p>
 
 <p>
-  <b>Photo:</b>
-  <%= image_tag @item.photo.url %>
+  <b>Seller:</b>
+  @<%=h @item.seller %>
 </p>
 
+<% if logged_in? %>
 
-<p>
-<b>Place Bid:</b>
- <a href="#" onclick="return TweetAndTrack.open(this, 'http://localhost:3000<%= url_for(@item) %>');"><span style="display:none;">I bid $(bid amt) xyz<%=h @item.id %></span>Place Bid</a>
-</p>
-<p>
+<% if current_user.login == @item.seller %>
+            <p>
 <b>Start Auction:</b>
  <a href="#" onclick="return TweetAndTrack.open(this, 'http://localhost:3000<%= url_for(@item) %>');"><span style="display:none;">I started this new auction. xyz<%=h @item.id %></span>Start Auction</a>
 </p>
+          <% else %>
+          
+            <p>
+<b>Place Bid:</b>
+ <a href="#" onclick="return TweetAndTrack.open(this, 'http://localhost:3000<%= url_for(@item) %>');"><span style="display:none;">I bid $(bid amt) xyz<%=h @item.id %></span>Place Bid</a>
+</p>          
+          <% end %>
+          <% else %>
+          <b>Place Bid:</b>
+ <a href="#" onclick="return TweetAndTrack.open(this, 'http://localhost:3000<%= url_for(@item) %>');"><span style="display:none;">I bid $(bid amt) xyz<%=h @item.id %></span>Place bid with Twitter</a>
+</p>
+          <% end %>
+
+
 
 <p>
 	<b>Current Bids:</b>
@@ -38,8 +60,8 @@ new TWTR.Widget({
   type: 'search',
   search: 'xyz<%=h @item.id %>',
   interval: 6000,
-  title: 'Who is winning this auction',
-  subject: 'Bids',
+  title: ' ',
+  subject: ' ',
   width: 250,
   height: 300,
   theme: {
@@ -66,5 +88,14 @@ new TWTR.Widget({
 </script>
 </p>
 
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+</td>
+</tr>
+	</tbody>
+</table>
+<% if logged_in? %>
+<% if current_user.login == 'matjohnson' %>
+	<%= link_to 'Edit', edit_item_path(@item) %> |
+<% else %>
+<% end %>
+<% end %>
+	<%= link_to 'Back', items_path %>

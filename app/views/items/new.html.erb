@@ -2,7 +2,10 @@
 
 <% form_for(@item, :html => { :multipart => true }) do |f| %>
   <%= f.error_messages %>
-
+  <p>
+    
+    <%= f.hidden_field :seller, :value => current_user.login %>
+  </p>
   <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
