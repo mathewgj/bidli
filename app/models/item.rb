@@ -4,6 +4,6 @@ has_attached_file :photo,
 	:storage => :s3,
     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
     :path => ":attachment/:id/:style.:extension",
-    :bucket => 'twapp2'
+    :bucket => 'uploads.bidli.com'
 
 end
