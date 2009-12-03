@@ -1,0 +1,11 @@
+development:
+  access_key_id: AKIAI7GO7T67JAY3ARYA
+  secret_access_key: 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
+
+test:
+  access_key_id: AKIAI7GO7T67JAY3ARYA
+  secret_access_key: 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
+
+production:
+  access_key_id: AKIAIMMHAD3BKG5GHFKA
+  secret_access_key: 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
