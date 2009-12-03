@@ -31,6 +31,10 @@ a {
 .clearfix {
   clear: both; }
 
+.buttonlink {
+	font-size: 18px;
+}
+
 #wrapper {
   background: white;
   padding: 1.5em 2em;

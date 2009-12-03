@@ -31,21 +31,21 @@
 <% if logged_in? %>
 
 <% if current_user.login == @item.seller %>
-            <p>
-<b>Start Auction:</b>
+            <h1>
+
  <a href="#" onclick="return TweetAndTrack.open(this, 'http://localhost:3000<%= url_for(@item) %>');"><span style="display:none;">I started this new auction. xyz<%=h @item.id %></span>Start Auction</a>
-</p>
+</h1>
           <% else %>
           
-            <p>
-<b>Place Bid:</b>
+            <h1>
+
  <a href="#" onclick="return TweetAndTrack.open(this, 'http://localhost:3000<%= url_for(@item) %>');"><span style="display:none;">I bid $(bid amt) xyz<%=h @item.id %></span>Place Bid</a>
-</p>          
+</h2>          
           <% end %>
           <% else %>
-          <b>Place Bid:</b>
+          <h1>
  <a href="#" onclick="return TweetAndTrack.open(this, 'http://localhost:3000<%= url_for(@item) %>');"><span style="display:none;">I bid $(bid amt) xyz<%=h @item.id %></span>Place bid with Twitter</a>
-</p>
+</h1>
           <% end %>
 
 
