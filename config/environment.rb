@@ -10,6 +10,8 @@ Rails::Initializer.run do |config|
   config.gem 'twitter-auth', :lib => 'twitter_auth'
   config.gem 'oauth', :version => '>= 0.3.1'
   config.gem 'haml', :version => '>= 2.0.6'
+  config.gem "aws-s3", :version => ">= 0.6.2", :lib => "aws/s3"
+
 
 
   # Settings in config/environments/* take precedence over those specified here.
