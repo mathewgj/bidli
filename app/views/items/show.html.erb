@@ -33,18 +33,18 @@
 <% if current_user.login == @item.seller %>
             <h1>
 
- <a href="#" onclick="return TweetAndTrack.open(this, 'http://localhost:3000<%= url_for(@item) %>');"><span style="display:none;">I started this new auction. xyz<%=h @item.id %></span>Start Auction</a>
+ <a href="#" onclick="return TweetAndTrack.open(this, 'http://severe-moon-87.heroku.com<%= url_for(@item) %>');"><span style="display:none;">I started this new auction. xyz<%=h @item.id %></span>Start Auction</a>
 </h1>
           <% else %>
           
             <h1>
 
- <a href="#" onclick="return TweetAndTrack.open(this, 'http://localhost:3000<%= url_for(@item) %>');"><span style="display:none;">I bid $(bid amt) xyz<%=h @item.id %></span>Place Bid</a>
+ <a href="#" onclick="return TweetAndTrack.open(this, 'http://severe-moon-87.heroku.com<%= url_for(@item) %>');"><span style="display:none;">I bid $(bid amt) xyz<%=h @item.id %></span>Place Bid</a>
 </h2>          
           <% end %>
           <% else %>
           <h1>
- <a href="#" onclick="return TweetAndTrack.open(this, 'http://localhost:3000<%= url_for(@item) %>');"><span style="display:none;">I bid $(bid amt) xyz<%=h @item.id %></span>Place bid with Twitter</a>
+ <a href="#" onclick="return TweetAndTrack.open(this, 'http://severe-moon-87.heroku.com<%= url_for(@item) %>');"><span style="display:none;">I bid $(bid amt) xyz<%=h @item.id %></span>Place bid with Twitter</a>
 </h1>
           <% end %>
 
