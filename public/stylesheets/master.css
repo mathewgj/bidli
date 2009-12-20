@@ -9,11 +9,21 @@ body, p, ol, ul {
   line-height: 18px;
 }
 
-td, th {
+td {
 	font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
   padding: 6px 8px;
+  border-bottom: 1px dotted;
+}
+
+th {
+	font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+  padding: 6px 8px;
+  border-bottom: 2px solid;
+  text-align: left;
 }
 
 pre {
