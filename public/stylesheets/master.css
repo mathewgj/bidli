@@ -14,7 +14,7 @@ td {
   font-size:   13px;
   line-height: 18px;
   padding: 6px 8px;
-  border-bottom: 2px dotted;
+  
 }
 
 th {
@@ -132,4 +132,6 @@ div.notice {
   list-style: square;
 }
 
-
+#photo img {
+	width:100%; max-width:600px;
+}
