@@ -11,6 +11,6 @@
 <% if @users.any? %>
   <h2>Recently Joined</h2>
   <% for user in @users %>
-    <%= link_to profile_image(user, :height => "48", :width => "48"), twitter_profile_url(user),  :target => "_blank" %>
+    <%= image_tag(user.profile_image_url, :width => "48", :height => "48") %>
   <% end %>
 <% end %>
