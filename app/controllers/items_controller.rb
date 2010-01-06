@@ -6,7 +6,7 @@ before_filter :login_required, :except => [:index, :show]
   # GET /items
   # GET /items.xml
   def index
-    @items = Item.all
+    @items = Item.all(:order => "id DESC")
 
     respond_to do |format|
       format.html # index.html.erb
