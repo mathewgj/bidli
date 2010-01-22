@@ -9,11 +9,17 @@ body, p, ol, ul {
   line-height: 18px;
 }
 
+table
+{
+border-collapse:collapse;
+}
+
 td {
 	font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
   padding: 6px 8px;
+  border-bottom: 1px dotted;
   
 }
 
@@ -22,9 +28,11 @@ th {
   font-size:   18px;
   line-height: 20px;
   padding: 6px 8px;
-  border-bottom: 2px dotted;
+  border-bottom: 2px solid;
   text-align: left;
 }
+
+
 
 pre {
   background-color: #eee;
@@ -34,7 +42,9 @@ pre {
 
 a {
   color: #06b;
-  font-weight: bold; }
+  font-weight: bold; 
+  text-decoration: none;
+}
   a img {
     border: 0; }
 
