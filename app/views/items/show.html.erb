@@ -45,6 +45,7 @@
 
  <a href="#" onclick="return TweetAndTrack.open(this, 'http://bidli.com<%= url_for(@item) %>');"><span style="display:none;">I started this new auction on bidli<%=h @item.id %></span>Start Auction</a>
 </h1>
+<p><a href="#cl">Get Craigslist code</a></p>
           <% else %>
           
             <h1>
@@ -114,7 +115,7 @@ new TWTR.Widget({
 
 <% if current_user.login == @item.seller %>
 
-<p>Craigslist Snippet. Copy & paste <a href="http://post.craiglist.org">here.</a></p>
+<p id="cl">Craigslist Snippet. Copy & paste <a href="http://post.craiglist.org">here.</a></p>
 
 <div id='snippet'>
 <pre>
