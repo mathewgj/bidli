@@ -1,0 +1,36 @@
+<form>
+<input type="button" value="Get Code To Paste"
+onClick= 'window.location = "view-source:" + window.location.href' >
+</form>
+<table>
+	<tbody>
+		<tr>
+			<td>
+				<div id='photo'>
+
+  <%= image_tag @item.photo.url %>
+</div>
+</td>
+			<td>
+<p>
+  <b>Title:</b>
+  <%=h @item.title %>
+</p>
+
+<p>
+  <b>Starting bid:</b>
+  <%=h @item.startingbid %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%=h @item.enddate %>
+</p>
+
+<p>
+  <b>Seller:</b>
+  @<%=h @item.seller %>
+</p>
+<h1>
+<a href="http://bidli.com<%= url_for(@item) %>">See Latest Bids</a>
+</h1>

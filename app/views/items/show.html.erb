@@ -109,3 +109,21 @@ new TWTR.Widget({
 <% end %>
 <% end %>
 	<%= link_to 'See all auctions', items_path %>
+
+<p>Craigslist Snippet. Copy & paste <a href="http://post.craiglist.org">here.</a></p>
+
+<div id='snippet'>
+<pre>
+&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;  
+&lt;img src=&quot;<%= url_for @item.photo.url %>&quot; /&gt;
+&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Title:&lt;/b&gt;
+<%=h @item.title %>
+&lt;/p&gt;&lt;p&gt;&lt;b&gt;Starting bid:&lt;/b&gt;  
+<%=h @item.startingbid %>
+&lt;/p&gt;&lt;p&gt;&lt;b&gt;End date:&lt;/b&gt;  
+<%=h @item.enddate %>
+&lt;/p&gt;&lt;p&gt;&lt;b&gt;Seller:&lt;/b&gt;  
+@<%=h @item.seller %>
+&lt;a href=&quot;http://bidli.com<%= url_for(@item) %>&quot;&gt;More info and latest bids&lt;/a&gt;&lt;/p&gt;<br>&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+</pre>
+</div>

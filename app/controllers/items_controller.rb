@@ -40,6 +40,18 @@ before_filter :login_required, :except => [:index, :show]
   def edit
     @item = Item.find(params[:id])
   end
+  
+   # GET /items/1/share
+  # GET /items/1/share.xml
+  def share
+    @item = Item.find(params[:id])
+
+    respond_to do |format|
+      format.html # share.html.erb
+      format.xml  { render :xml => @item }
+    end
+  end
+
 
   # POST /items
   # POST /items.xml

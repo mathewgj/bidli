@@ -153,3 +153,8 @@ div.notice {
 	text-decoration: none;
 	font-weight: normal;
 }
+
+#snippet table {
+	border-style: solid;
+}
+	
