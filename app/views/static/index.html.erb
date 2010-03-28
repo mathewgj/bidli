@@ -30,7 +30,8 @@ var query='from%3Abidli_auctions';
 	
 		$.getJSON(url+query,function(json){
 			$.each(json.results,function(i,tweet){
-			   $("#results").append('<p>'+tweet.text+'</p>');
+			   $("#results").append('<p>'+tweet.text+'</p><p>'+tweet.created_at+'</p><hr>');
+			  
 			
 		});
 	});
