@@ -11,8 +11,9 @@
   </head>
   <body>
     <div id='wrapper'>
+    <div class="logo">
       <div id='header'>
-       
+      
          <a href="/" title="Simple social auctions" ><img src="/images/logo2.png" width="170" height="170" alt="bidli" /></a>
         <div id='user_bar'>
           <% if logged_in? %>
@@ -30,6 +31,7 @@
           <div class='flash notice'><%= flash[:notice] %></div>
         <% end %>
         <%= yield %>
+      </div>
       </div>
     </div>
     <div id='footer'>
