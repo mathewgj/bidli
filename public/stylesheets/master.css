@@ -162,7 +162,7 @@ div.image
 {
   width: 875px;
   height: 768px;
-  background-image: url(images/logo2.png);
+  
   border: 2px solid black;
 }
 
@@ -193,7 +193,7 @@ div.transbox p
 
 div.transbox a {
   color: #fff;
-  font-weight: normal; 
+  font-weight: bold; 
   text-decoration: underline;
 }
 div.transbox a img {
@@ -210,7 +210,7 @@ div.transbox a img {
 }
 
 a.button {
-    background: transparent url('images/bg_button_a.gif') no-repeat scroll top right;
+    background: transparent url('/images/bg_button_a.gif') no-repeat scroll top right;
     color: #444;
     display: block;
     float: left;
@@ -229,7 +229,7 @@ border-bottom-right-radius: 1em;
 }
 
 a.button span {
-    background: transparent url('images/bg_button_span.gif') no-repeat;
+    background: transparent url('/images/bg_button_span.gif') no-repeat;
     display: block;
     line-height: 14px;
     padding: 5px 0 5px 18px;
