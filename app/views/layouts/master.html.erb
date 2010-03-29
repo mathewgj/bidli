@@ -11,22 +11,24 @@
 
 <script type="text/javascript">
 function parseUsername(tweet) {
-var newPost = tweet.replace(/[@]+[A-Za-z0-9-_]+/, function(u) {
-var username = u.replace("@","");
-
-return '<a href="http://twitter.com/'+ username +'">'+'@' + username +'</a>';
-});
-return newPost;
+	console.debug("called: ", tweet);
+	
+	var newPost = tweet.replace(/[@]+[A-Za-z0-9-_]+/g, function(u) {
+		console.debug("username: " + u);
+		var username = u.replace("@","");
+		return '<a href="http://twitter.com/'+ username +'">'+'@' + username +'</a>';
+	});
+	return newPost;
 }
 
-// test for parseUsername
-window.onload = function() {
-var tweet = "@matjohnson";
+function parseURL(tweet) {
+	return tweet.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+/g,
+		function(url) {
+			return url.link(url);
+		});
+};
 
-var element = document.createElement("div");
-element.innerHTML = parseUsername(tweet);
-document.body.appendChild(element);
-}
+
 </script>
 
   </head>
