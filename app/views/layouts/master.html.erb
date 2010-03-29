@@ -10,11 +10,8 @@
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 <script type="text/javascript">
-function parseUsername(tweet) {
-	console.debug("called: ", tweet);
-	
-	var newPost = tweet.replace(/[@]+[A-Za-z0-9-_]+/g, function(u) {
-		console.debug("username: " + u);
+function parseUsername(tweet) {		
+	var newPost = tweet.replace(/[@]+[A-Za-z0-9-_]+/g, function(u) {		
 		var username = u.replace("@","");
 		return '<a href="http://twitter.com/'+ username +'">'+'@' + username +'</a>';
 	});
