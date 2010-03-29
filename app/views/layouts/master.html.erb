@@ -9,6 +9,26 @@
     <script type="text/javascript" src="http://use.typekit.com/jqj2mbs.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
+<script type="text/javascript">
+function parseUsername(tweet) {
+var newPost = tweet.replace(/[@]+[A-Za-z0-9-_]+/, function(u) {
+var username = u.replace("@","");
+
+return '<a href="http://twitter.com/'+ username +'">'+'@' + username +'</a>';
+});
+return newPost;
+}
+
+// test for parseUsername
+window.onload = function() {
+var tweet = "@matjohnson";
+
+var element = document.createElement("div");
+element.innerHTML = parseUsername(tweet);
+document.body.appendChild(element);
+}
+</script>
+
   </head>
   <body>
     <div id='wrapper'>

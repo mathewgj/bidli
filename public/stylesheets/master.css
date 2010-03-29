@@ -78,7 +78,14 @@ a {
 #frontpage {
 	width: 65em;
 	margin-left: 5em;
-	margin-bottom: 5em;  }
+	margin-bottom: 5em;
+	margin-top: 5em;  }
+	
+#headline {
+	width:55em;
+	margin-left: 15em;
+	margin-top: -10em;
+}
 
 #header h1 {
   float: left;
