@@ -122,7 +122,8 @@ div.error {
 div.notice {
   background: #cfc;
   border-color: #191;
-  color: #131; }
+  color: #131;
+  padding-top: 0; }
 
 .fieldWithErrors {
   padding: 2px;
