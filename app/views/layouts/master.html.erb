@@ -42,15 +42,15 @@ function parseURL(tweet) {
             <%= link_to 'Login via Twitter', '/login' %>
           <% end %>
         </div>
-        <div class='clearfix'></div>
+       <div class='clearfix'></div>
       </div>
       <div id='contents'>
-        <% if flash[:error] %>
+<!--        <% if flash[:error] %>
           <div class='flash error'><%= flash[:error] %></div>
         <% end %><% if flash[:notice] %>
           <div class='flash notice'><%= flash[:notice] %></div>
         <% end %>
-        <%= yield %>
+-->        <%= yield %>
       </div>
       </div>
     </div>
