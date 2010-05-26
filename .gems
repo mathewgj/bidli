@@ -1,6 +1,5 @@
-jrails
-paperclip
 twitter-auth
-uberkit
 oauth
-right_aws
+haml
+aws-s3
+will_paginate
