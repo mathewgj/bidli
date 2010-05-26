@@ -6,7 +6,7 @@ before_filter :login_required, :except => [:index, :show]
   # GET /items
   # GET /items.xml
   def index
-    @items = Item.all(:order => "id DESC")
+    @items = Item.paginate :per_page => 50, :page => params[:page], :order => 'created_at DESC'
 
     respond_to do |format|
       format.html # index.html.erb
