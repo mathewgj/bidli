@@ -11,6 +11,7 @@ Rails::Initializer.run do |config|
   config.gem 'oauth', :version => '>= 0.3.1'
   config.gem 'haml', :version => '>= 2.0.6'
   config.gem "aws-s3", :version => ">= 0.6.2", :lib => "aws/s3"
+  config.gem 'will_paginate', :version => '~> 2.3.11', :source => 'http://gemcutter.org'
 
 
 
