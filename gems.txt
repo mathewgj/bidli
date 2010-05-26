@@ -1,0 +1,5 @@
+twitter-auth
+oauth
+haml
+aws-s3
+will_paginate

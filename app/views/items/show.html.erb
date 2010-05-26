@@ -7,7 +7,7 @@
 <div class="transbox">
 <p><b><%=h @item.title %></b></p>
 <p>
-  <b>Starting bid:</b>
+  <b>Starting price:</b>
   <%=h @item.startingbid %>
 </p>
 
@@ -32,12 +32,12 @@
           
             <p>
 
- <a href="#" onclick="return TweetAndTrack.open(this, 'http://bidli.com<%= url_for(@item) %>');"><span style="display:none;">I bid $(bid amt) on bidli<%=h @item.id %></span>Place Bid</a>
+ <a href="#" onclick="return TweetAndTrack.open(this, 'http://bidli.com<%= url_for(@item) %>');"><span style="display:none;">I bid $(bid amt) on bidli<%=h @item.id %></span>Make an offer</a>
 </p>          
           <% end %>
           <% else %>
           <p>
- <a href="#" onclick="return TweetAndTrack.open(this, 'http://bidli.com<%= url_for(@item) %>');"><span style="display:none;">I bid $(bid amt) on bidli<%=h @item.id %></span>Place bid with Twitter</a>
+ <a href="#" onclick="return TweetAndTrack.open(this, 'http://bidli.com<%= url_for(@item) %>');"><span style="display:none;">I bid $(bid amt) on bidli<%=h @item.id %></span>Make an offer with Twitter</a>
 </p>
           <% end %>
 
