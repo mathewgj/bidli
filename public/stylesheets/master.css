@@ -219,7 +219,10 @@ div.transbox a img {
   }
   	
 
-
+div.pagination {
+	margin-left: 100px;
+	margin-top: px;
+  }
 
 .clear { /* generic container (i.e. div) for floating buttons */
     overflow: hidden;
