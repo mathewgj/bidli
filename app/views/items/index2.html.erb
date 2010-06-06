@@ -1,0 +1,37 @@
+
+<h1>Auctions on Bidli.</h1>
+
+<h2><%= link_to 'Sell something', new_item_path %></h2>
+
+<br>
+
+
+<% @items.each do |item| %>
+
+<div class="boxgrid caption">
+				<%= link_to image_tag(item.photo.url), item %>
+				<div class="cover boxcaption">
+					<h3><%= item.seller %></h3>
+					<p><%= item.title %><%=h item.startingbid %>&nbsp;<%=h item.enddate %>
+    <% if logged_in? %>
+	<% if current_user.login == 'matjohnson' %>
+    
+    &nbsp;<%= link_to 'Edit', edit_item_path(item) %>
+    &nbsp;<%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %>
+	<% else %>
+	<% end %> 
+	<% end %>  
+	</p>
+</div>
+</div>	
+   
+ 
+<% end %>
+
+
+
+<%= will_paginate @items %>
+
+
+<br />
+
